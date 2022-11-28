@@ -1,0 +1,54 @@
+﻿<Window x:Class="PROJEKAT.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROJEKAT"
+        mc:Ignorable="d"
+        Title="Window2" Height="250" Width="300" Loaded="Colors_Loaded">
+    <Grid>
+        
+        <Label x:Name="debljinaKonturneLinije" Content="Debljina konturne linije:" HorizontalAlignment="Left" Margin="4,15,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TB_debljinaKonturneLinije" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="162" Margin="135,15,0,0"/>
+
+        <Label x:Name="BojaKonturneLinije" Content="Boja Konturne linije:" HorizontalAlignment="Left" Margin="5,50,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CB_bojaKonturneLinije" HorizontalAlignment="Left" Margin="135,50,0,0" VerticalAlignment="Top" Width="162" SelectionChanged="CBBojaKonturneLinije">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel  Orientation="Horizontal">
+
+                        <Rectangle  Height="10" Width="15" Fill="{Binding Name}"/>
+                        <TextBlock Text="{Binding Name}"/>
+
+
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+
+
+
+        <Label x:Name="BojaOblika" Content="Oboji oblik:" HorizontalAlignment="Left" Margin="5,85,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CB_bojaOblika" HorizontalAlignment="Left" Margin="135,85,0,0" VerticalAlignment="Top" Width="162" SelectionChanged="CBBojaOblika">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+
+                        <Rectangle Height="10" Width="15" Fill="{Binding Name}"/>
+                        <TextBlock Text="{Binding Name}"/>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+
+
+        <Button x:Name="btnOtkazi" Click="Otkazi_Click" HorizontalAlignment="Left" Margin="160,181,0,0" VerticalAlignment="Top" Width="50" >Otkazi</Button>
+        <Button x:Name="btnNacrtaj" Click="Nacrtaj_Click" HorizontalAlignment="Left" Margin="230,181,0,0" VerticalAlignment="Top" Width="50" >Nacrtaj</Button>
+
+
+
+    </Grid>
+</Window>

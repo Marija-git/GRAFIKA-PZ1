@@ -1,0 +1,33 @@
+﻿<Window x:Class="PROJEKAT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROJEKAT"
+        mc:Ignorable="d"
+           Title="MainWindow" Height="450" Width="800">
+
+
+    <Grid  Name="GridPanel">
+        <Canvas Name="canvasDisplay" Cursor="Pen" Background="LightYellow"  Margin="0,50,-0.4,0"
+                MouseRightButtonDown="Canvas_MouseRightButtonDown"
+                MouseLeftButtonDown="Canvas_MouseLeftButtonDown"
+                 />
+
+        <Menu Background="LightPink" Name="MenuButtons" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="1186">
+
+            <Button x:Name="btnEllipse" Click="Ellipse_Click">Ellipse</Button>
+            <Button x:Name="btnPolygon" Click="Polygon_Click">Polygon</Button>
+            <Button x:Name="btnUndo" Click="Undo_Click">Undo</Button>
+            <Button x:Name="btnClear" Click="Clear_Click">Clear</Button>
+            <Button x:Name="btnRedo" Click="Redo_Click">Redo</Button>
+            <Button x:Name="btnLoadModel" Click="Model_Click">LoadModel</Button>
+
+        </Menu>
+
+    </Grid>
+
+    
+
+
+</Window>
